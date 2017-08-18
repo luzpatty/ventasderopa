@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Nombre: MyString
+  CanPieza: 1
+  Temporada: MyString
+  Talla: 1
+  Precio: 1
+  Estilo: MyString
+
+two:
+  Nombre: MyString
+  CanPieza: 1
+  Temporada: MyString
+  Talla: 1
+  Precio: 1
+  Estilo: MyString

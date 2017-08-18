@@ -1,0 +1,112 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reportes de ventas</h1>
+<table class="table table-striped table-inverse">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Canpieza</th>
+      <th>Temporada</th>
+      <th>Talla</th>
+      <th>Precio</th>
+      <th>Estilo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+   
+   
+
+  <tbody>
+    <% @ventasporprecio.each do |ventum| %>
+      <tr>
+        <td><%= ventum.Nombre %></td>
+        <td><%= ventum.CanPieza %></td>
+        <td><%= ventum.Temporada %></td>
+        <td><%= ventum.Talla %></td>
+        <td><%= ventum.Precio %></td>
+        <td><%= ventum.Estilo %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% ventaprecio = @ventasporprecio.first %>
+<% ventaprecio2 = @ventasporprecio.last %>
+<h4>La compra de menos cantidad por precio fue de:</h4> <h4><%= ventaprecio.Nombre %></h4>
+<h4>La compra de mas cantidad por precio fue de:</h4> <h4><%= ventaprecio2.Nombre %></h4>
+
+
+
+<table class="table table-striped table-inverse">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Canpieza</th>
+      <th>Temporada</th>
+      <th>Talla</th>
+      <th>Precio</th>
+      <th>Estilo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ventasportalla.each do |ventum| %>
+      <tr>
+        <td><%= ventum.Nombre %></td>
+        <td><%= ventum.CanPieza %></td>
+        <td><%= ventum.Temporada %></td>
+        <td><%= ventum.Talla %></td>
+        <td><%= ventum.Precio %></td>
+        <td><%= ventum.Estilo %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% ventatalla = @ventasportalla.first %>
+<% ventatalla2 = @ventasportalla.last %>
+<h4>La venta de la talla mas chica es:</h4><h4><%= ventatalla.Talla %></h4><h4>fue echa por</h4><h4><%= ventatalla.Nombre %></h4>
+<h4>La venta de la talla mas grande es:</h4><h4><%= ventatalla2.Talla %></h4><h4>fue echa por</h4><h4><%= ventatalla2.Nombre %></h4>
+
+
+
+<table class="table table-striped table-inverse">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Canpieza</th>
+      <th>Temporada</th>
+      <th>Talla</th>
+      <th>Precio</th>
+      <th>Estilo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ventasPorcanPieza.each do |ventum| %>
+      <tr>
+        <td><%= ventum.Nombre %></td>
+        <td><%= ventum.CanPieza %></td>
+        <td><%= ventum.Temporada %></td>
+        <td><%= ventum.Talla %></td>
+        <td><%= ventum.Precio %></td>
+        <td><%= ventum.Estilo %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% ventapieza = @ventasPorcanPieza.first %>
+<% ventapiezamenos = @ventasPorcanPieza.last %>
+<h4>El compra menor por cantidad de piezas fue echa por:</h4> <h4><%= ventapieza.Nombre %></h4>
+<h4>La compra mayor por cantidad de piezas fue echa por:</h4><h4><%= ventapiezamenos.Nombre %></h4>
+
+
+
+
+
+
+
+<br>
